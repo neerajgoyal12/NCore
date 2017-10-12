@@ -1,0 +1,22 @@
+{
+  "name": "NCore",
+  "version": "0.1.0",
+  "summary": "A short description of NCore.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/neerajgoyal12/NCore",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "neerajgoyal12": "neeraj@systologysoftware.com"
+  },
+  "source": {
+    "git": "https://github.com/neerajgoyal12/NCore.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "NCore/Classes/**/*"
+}
