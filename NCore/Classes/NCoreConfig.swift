@@ -7,6 +7,8 @@
 
 import Foundation
 
-class NCoreConfig {
-    
+public class NCoreConfig {
+    public init() {
+        
+    }
 }
