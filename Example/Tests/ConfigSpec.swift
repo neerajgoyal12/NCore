@@ -29,7 +29,7 @@ class ConfigSpec: QuickSpec {
         describe("Config class and its subclass") {
             let config1 = Config.sharedConfig;
             class Config2 : Config {
-//                static let sharedConfig = Config2()
+                override static let sharedConfig = Config2()
                 required fileprivate init() {
                     super.init()
                     someString = "Config2"
