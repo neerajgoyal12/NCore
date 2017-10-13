@@ -26,7 +26,7 @@ class ConfigSpec: QuickSpec {
                 expect(config1).to(beIdenticalTo(config2))
             }
         }
-        describe("Config class if subclassed should still return same insatnce") {
+        describe("Config class subclass") {
             let config1 = Config.sharedConfig;
             class Config2 : Config {
                 required fileprivate init() {
@@ -34,7 +34,21 @@ class ConfigSpec: QuickSpec {
                 }
             }
             let config2 = Config2.sharedConfig;
-            expect(config1).to(beIdenticalTo(config2))
+            it("instance of super class should be same as instance of subclass") {
+                expect(config1).to(beIdenticalTo(config2))
+            }
+        }
+        describe("Config class if subclassed should have different instance types") {
+            let _ = Config.sharedConfig;
+            class Config2 : Config {
+                required fileprivate init() {
+                    
+                }
+            }
+            let config2 = Config2.sharedConfig
+            it("instance of sub class should not be kind of super class") {
+                expect(config2).toNot(beAnInstanceOf(Config.self))
+            }
         }
     }
 }
