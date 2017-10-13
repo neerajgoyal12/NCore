@@ -8,5 +8,8 @@
 
 import Foundation
 class Config {
-    
+    static let sharedConfig = Config()
+    private init() {
+        
+    }
 }
