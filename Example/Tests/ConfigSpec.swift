@@ -29,7 +29,7 @@ class ConfigSpec: QuickSpec {
         describe("Config class and its subclass") {
             let config1 = Config.sharedConfig;
             class Config2 : Config {
-//                static let sharedConfig2 = Config2()
+//                static let sharedConfig = Config2()
                 required fileprivate init() {
                     super.init()
                     someString = "Config2"
@@ -37,14 +37,14 @@ class ConfigSpec: QuickSpec {
             }
             let config2 = Config2.sharedConfig;
             it("both the instance to should have same address") {
-                expect(config1).to(beIdenticalTo(config2))
+                expect(config1).to(beIdenticalTo(config2), description: "Super Class instance and Base class instance are same")
             }
-            it("instance of sub class should not be kind of super class") {
-                expect(config2).toNot(beAnInstanceOf(Config.self))
+            it("instance of sub class should be kind of super class") {
+                expect(config2).to(beAnInstanceOf(Config.self), description: "Super Class instance and Base class instance are same")
             }
-            it("super class instance should not set someString, sub class instance should set someString") {
+            it("super class instance should set someString as Config1, sub class instance should set someString as Config1") {
                 expect(config1.someString).to(equal("Config1"))
-                expect(config2.someString).to(equal("Config2"))
+                expect(config2.someString).to(equal("Config1"), description: "Super Class instance and Base class instance are same. Singleton can not be overridden without overriding static let shared.. ")
             }
         }
 //        describe("Config class if subclassed should have different instance types") {
