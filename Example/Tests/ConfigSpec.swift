@@ -29,13 +29,13 @@ class ConfigSpec: QuickSpec {
         describe("Config class and its subclass") {
             let config1 = Config.sharedConfig;
             class Config2 : Config {
-                static let sharedConfig2 = Config2()
+//                static let sharedConfig2 = Config2()
                 required fileprivate init() {
                     super.init()
                     someString = "Config2"
                 }
             }
-            let config2 = Config2.sharedConfig2;
+            let config2 = Config2.sharedConfig;
             it("both the instance to should have same address") {
                 expect(config1).to(beIdenticalTo(config2))
             }
