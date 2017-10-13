@@ -23,8 +23,18 @@ class ConfigSpec: QuickSpec {
             let config1 = Config.sharedConfig
             let config2 = Config.sharedConfig
             it("both config1 and config2 should be same instance") {
-                expect(config1).to(be(config2))
+                expect(config1).to(beIdenticalTo(config2))
             }
+        }
+        describe("Config class if subclassed should still return same insatnce") {
+            let config1 = Config.sharedConfig;
+            class Config2 : Config {
+                required fileprivate init() {
+                    
+                }
+            }
+            let config2 = Config2.sharedConfig;
+            expect(config1).to(beIdenticalTo(config2))
         }
     }
 }
