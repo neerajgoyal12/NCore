@@ -1,5 +1,5 @@
 //
-//  NCoreConfigSpec.swift
+//  ConfigSpec.swift
 //  NCore_Tests
 //
 //  Created by Neeraj Goyal on 13/10/17.
@@ -9,12 +9,11 @@
 import Quick
 import Nimble
 import NCore
-@testable import NCore
 
-class NCoreConfigSpec: QuickSpec {
+class ConfigSpec: QuickSpec {
     override func spec() {
-        describe("NCoreConfig Initialization") {
-            let ncore = NCoreConfig()
+        describe("Config Initialization") {
+            let ncore = Config()
             it("should get initialized and not be nil") {
                 expect(ncore).toNot(beNil())
                 
@@ -22,4 +21,3 @@ class NCoreConfigSpec: QuickSpec {
         }
     }
 }
-
