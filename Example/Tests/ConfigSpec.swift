@@ -36,7 +36,7 @@ class ConfigSpec: QuickSpec {
                 }
             }
             let config2 = Config2.sharedConfig;
-            it("both the instance to should have same address") {
+            it("both the instance should have same address") {
                 expect(config1).to(beIdenticalTo(config2), description: "Super Class instance and Base class instance are same")
             }
             it("instance of sub class should be kind of super class") {
