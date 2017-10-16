@@ -8,7 +8,7 @@
 
 import Quick
 import Nimble
-import NCore
+//import NCore
 @testable import NCore
 
 class NCoreConfigSpec: QuickSpec {
