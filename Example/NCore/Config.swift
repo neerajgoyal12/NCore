@@ -10,7 +10,7 @@ import Foundation
 final class Config {
     static let sharedConfig = Config()
     var someString: String?
-    required internal init() {
+    private init() {
         someString = "Config1"
     }
 }
