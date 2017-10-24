@@ -238,6 +238,7 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 6M7JK2V9Z6;
 						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
@@ -556,6 +557,7 @@
 			baseConfigurationReference = 017E5B84C03AE5D0728D5A5E /* Pods-NCore_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6M7JK2V9Z6;
 				INFOPLIST_FILE = NCore/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks $(FRAMEWORK_SEARCH_PATHS)";
@@ -572,6 +574,7 @@
 			baseConfigurationReference = 3DB61276FC4EEB3EA8002F53 /* Pods-NCore_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6M7JK2V9Z6;
 				INFOPLIST_FILE = NCore/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks $(FRAMEWORK_SEARCH_PATHS)";
@@ -679,6 +682,7 @@
 			baseConfigurationReference = 1B208A5B7BDAD41465CAB1A3 /* Pods-NCore_Example.development.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6M7JK2V9Z6;
 				INFOPLIST_FILE = NCore/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks $(FRAMEWORK_SEARCH_PATHS)";
@@ -762,6 +766,7 @@
 			baseConfigurationReference = A93EE102D41F37ACCD8B79F1 /* Pods-NCore_Example.uat.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6M7JK2V9Z6;
 				INFOPLIST_FILE = NCore/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks $(FRAMEWORK_SEARCH_PATHS)";
@@ -848,6 +853,7 @@
 			baseConfigurationReference = 93B7B2B245374433E4CBA7C2 /* Pods-NCore_Example.staging.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6M7JK2V9Z6;
 				INFOPLIST_FILE = NCore/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks $(FRAMEWORK_SEARCH_PATHS)";
@@ -931,6 +937,7 @@
 			baseConfigurationReference = 5070255D3F2D5FDE1421C09B /* Pods-NCore_Example.production.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6M7JK2V9Z6;
 				INFOPLIST_FILE = NCore/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks $(FRAMEWORK_SEARCH_PATHS)";
