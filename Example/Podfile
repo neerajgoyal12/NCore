@@ -5,7 +5,8 @@ use_frameworks!
 
 target 'NCore_Example' do
   pod 'NCore', :path => '../'
-
+  pod 'Firebase/Core'
+  
   target 'NCore_Tests' do
     inherit! :search_paths
     pod 'Quick', '~> 1.2.0'
