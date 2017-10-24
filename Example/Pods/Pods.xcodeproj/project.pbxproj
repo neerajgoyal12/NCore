@@ -367,7 +367,7 @@
 		61B72D9A128D250602B78DBD6DCC1CBE /* FBSnapshotTestCase.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = FBSnapshotTestCase.modulemap; sourceTree = "<group>"; };
 		61D91DFDFD53B12C496B1A61BF20F847 /* FBSnapshotTestCase-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FBSnapshotTestCase-prefix.pch"; sourceTree = "<group>"; };
 		62607AD1A1CF869F66062853E578374D /* Pods_NCore_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NCore_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		656E189129970D7FC323EA13351FA47A /* NCoreConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NCoreConfig.swift; path = NCore/Classes/NCoreConfig.swift; sourceTree = "<group>"; };
+		656E189129970D7FC323EA13351FA47A /* NCoreConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NCoreConfig.swift; sourceTree = "<group>"; };
 		65A2365820F6CA06B42E6C84D072BF68 /* AssertionDispatcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AssertionDispatcher.swift; path = Sources/Nimble/Adapters/AssertionDispatcher.swift; sourceTree = "<group>"; };
 		680FDE0BFEA10B6314AD51120E7376A2 /* mach_excServer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mach_excServer.h; path = Sources/Lib/CwlPreconditionTesting/CwlMachBadInstructionHandler/mach_excServer.h; sourceTree = "<group>"; };
 		6A45A73C4C3E70E4CD3272B4E999ACBB /* NMBObjCMatcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NMBObjCMatcher.swift; path = Sources/Nimble/Adapters/NMBObjCMatcher.swift; sourceTree = "<group>"; };
@@ -879,7 +879,8 @@
 		7301BA896A036623E2D7A03B1C220737 /* NCore */ = {
 			isa = PBXGroup;
 			children = (
-				656E189129970D7FC323EA13351FA47A /* NCoreConfig.swift */,
+				8D8B2C6C1F9FB80200CD4B36 /* Assets */,
+				8D8B2C6B1F9FB7F600CD4B36 /* Classes */,
 				6D8726EECE4ADF680150CFE9BAC4A8F9 /* Support Files */,
 			);
 			name = NCore;
@@ -1005,6 +1006,23 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Nimble";
+			sourceTree = "<group>";
+		};
+		8D8B2C6B1F9FB7F600CD4B36 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				656E189129970D7FC323EA13351FA47A /* NCoreConfig.swift */,
+			);
+			name = Classes;
+			path = NCore/Classes;
+			sourceTree = "<group>";
+		};
+		8D8B2C6C1F9FB80200CD4B36 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Assets;
+			path = NCore/Assets;
 			sourceTree = "<group>";
 		};
 		8F1E53F823745D10E3FD986567FE962D /* Frameworks */ = {
