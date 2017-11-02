@@ -6,10 +6,9 @@
 //
 
 import Foundation
-import Firebase
+import FirebaseCore
 
 public class NCoreConfig {
     public init() {
-        FirebaseApp.configure()
     }
 }

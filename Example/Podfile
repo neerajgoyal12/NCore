@@ -5,7 +5,8 @@ use_frameworks!
 
 target 'NCore_Example' do
   pod 'NCore', :path => '../'
-  pod 'Firebase/Core'
+  pod 'Firebase'
+  pod 'Firebase/RemoteConfig'
   
   target 'NCore_Tests' do
     inherit! :search_paths
@@ -14,4 +15,31 @@ target 'NCore_Example' do
     pod 'FBSnapshotTestCase' , '~> 2.1.4'
     pod 'Nimble-Snapshots' , '~> 6.3.0'
   end
+end
+
+pre_install do |installer|
+    # workaround for https://github.com/CocoaPods/CocoaPods/issues/3289
+    def installer.verify_no_static_framework_transitive_dependencies; end
+end
+
+
+post_install do |installer|
+    project = installer.pods_project
+    
+    # prevent frameworks which they are already linked with a module from being linked with the main target again
+    installer.aggregate_targets.each do |target|
+        project.build_configurations.each do |build_configuration|
+            configFilePath = target.xcconfig_path(build_configuration.name)
+            configFile = File.read(configFilePath)
+            configFile = configFile.gsub(/-framework "Firebase" /, '')
+            configFile = configFile.gsub(/-framework "FirebaseCore" /, '')
+            configFile = configFile.gsub(/-framework "FirebaseCoreDiagnostics" /, '')
+            configFile = configFile.gsub(/-framework "FirebaseNanoPB" /, '')
+            configFile = configFile.gsub(/-framework "FirebaseRemoteConfig" /, '')
+            configFile = configFile.gsub(/-framework "FirebaseInstanceID" /, '')
+            configFile = configFile.gsub(/-framework "FirebaseAnalytics" /, '')
+            configFile = configFile.gsub(/-framework "FirebaseABTesting" /, '')
+            File.open(configFilePath, 'w') { |file| file << configFile }
+        end
+    end
 end
