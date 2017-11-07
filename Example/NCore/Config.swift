@@ -9,8 +9,11 @@
 import Foundation
 final class Config {
     static let sharedConfig = Config()
-    var someString: String?
+    var configuration: Dictionary<String, NSObject>!
+    var currentConfiguration: String!
     private init() {
-        someString = "Config1"
+        currentConfiguration = Bundle.main.object(forInfoDictionaryKey: "Config") as! String
+        let path: String? = Bundle.main.path(forResource: "Config", ofType: ".plist")
+        configuration = NSDictionary(contentsOfFile: path!)?.object(forKey: currentConfiguration) as! Dictionary<String, NSObject>
     }
 }

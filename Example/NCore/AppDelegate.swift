@@ -7,7 +7,8 @@
 //
 
 import UIKit
-import Firebase
+import FirebaseCore
+import FirebaseRemoteConfig
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,7 +18,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let sharedConfig = Config.sharedConfig
+        
         FirebaseApp.configure()
+        
+        let remoteConfig = RemoteConfig.remoteConfig()
+        let remoteConfigSettings = RemoteConfigSettings(developerModeEnabled: true)
+        remoteConfig.configSettings = remoteConfigSettings!
+        remoteConfig.setDefaults(sharedConfig.configuration)
+        
+        print(remoteConfig.configValue(forKey: "staging_abcUrl", namespace: nil, source: RemoteConfigSource.default).stringValue!)
+//        print(remoteConfig.configValue(forKey: "staging_abcUrl", namespace: nil, source: RemoteConfigSource.remote).stringValue!)
+        remoteConfig.fetch(withExpirationDuration: TimeInterval(0)) { (staus, error) -> Void in
+            if(remoteConfig.activateFetched()) {
+                print(remoteConfig.configValue(forKey: "staging_abcUrl", namespace: nil, source: RemoteConfigSource.default).stringValue!)
+                print(remoteConfig.configValue(forKey: "staging_abcUrl", namespace: nil, source: RemoteConfigSource.remote).stringValue!)
+            }
+        }
+        
         return true
     }
 

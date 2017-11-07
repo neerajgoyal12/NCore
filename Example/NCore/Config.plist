@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Debug</key>
+	<dict/>
+	<key>Development</key>
+	<dict/>
+	<key>Uat</key>
+	<dict/>
+	<key>Production</key>
+	<dict/>
+	<key>Staging</key>
+	<dict>
+		<key>abcEnabled</key>
+		<false/>
+		<key>xyzEnabled</key>
+		<true/>
+		<key>staging_abcUrl</key>
+		<string>www.google.com</string>
+		<key>staging_xyzUrl</key>
+		<string>www.apple.com</string>
+	</dict>
+</dict>
+</plist>
