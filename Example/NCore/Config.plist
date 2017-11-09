@@ -3,7 +3,12 @@
 <plist version="1.0">
 <dict>
 	<key>Debug</key>
-	<dict/>
+	<dict>
+		<key>staging_abcUrl</key>
+		<string>www.google.com</string>
+		<key>staging_xyzUrl</key>
+		<string>www.apple.com</string>
+	</dict>
 	<key>Development</key>
 	<dict/>
 	<key>Uat</key>

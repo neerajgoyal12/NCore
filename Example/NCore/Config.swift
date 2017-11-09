@@ -15,5 +15,8 @@ final class Config {
         currentConfiguration = Bundle.main.object(forInfoDictionaryKey: "Config") as! String
         let path: String? = Bundle.main.path(forResource: "Config", ofType: ".plist")
         configuration = NSDictionary(contentsOfFile: path!)?.object(forKey: currentConfiguration) as! Dictionary<String, NSObject>
+        debugPrint("""
+            configuration : \(configuration)
+            """)
     }
 }
