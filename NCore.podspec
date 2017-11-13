@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'NCore'
   s.version          = '0.1.2'
-  s.summary          = 'A short description of NCore.'
+  s.summary          = 'Just an exaple podspec to learn cocoapods and then expand on ones knowledge'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+Just an exaple podspec to learn cocoapods and then expand on ones knowledge. In Future this may expand to add and extend missing or helper methods in various swift classes.
                        DESC
 
   s.homepage         = 'https://github.com/neerajgoyal12/NCore'
