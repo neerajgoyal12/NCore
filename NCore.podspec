@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'NCore'
-  s.version          = '0.1.2'
+  s.version          = '0.1.3'
   s.summary          = 'Just an exaple podspec to learn cocoapods and then expand on ones knowledge'
 
 # This description is used to generate tags and improve search results.
