@@ -32,9 +32,9 @@ TODO: Add long description of the pod here.
 
   s.source_files = 'NCore/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'NCore' => ['NCore/Assets/*.png']
-  # }
+  s.resource_bundles = {
+     'NCore' => ['NCore/Assets/*.png']
+  }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'MapKit', 'Foundation', 'SystemConfiguration', 'CoreText', 'QuartzCore', 'Security', 'UIKit', 'Foundation', 'CoreGraphics','CoreTelephony', 'FirebaseCore', 'FirebaseRemoteConfig', 'FirebaseInstanceID', 'FirebaseAnalytics', 'FirebaseABTesting', 'FirebaseCoreDiagnostics', 'FirebaseNanoPB'
