@@ -8,7 +8,7 @@
 import Foundation
 import FirebaseCore
 
-public class NCoreConfig {
-    public init() {
+@objc public class NCoreConfig : NSObject{
+    @objc override public init() {
     }
 }
